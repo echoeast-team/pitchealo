@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crear cuenta · Pitchealo</title>
+  <meta name="description" content="Creá tu cuenta gratis en Pitchealo como fuente o publicador.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="assets/pitchealo-logo.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/playfair-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/public-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/registro.css">
+</head>
+<body data-side="">
+  <div class="reg-ribbon" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header class="reg-top">
+    <a class="brand" href="./" aria-label="Pitchealo, inicio"><svg viewBox="0 0 48 32" aria-hidden="true" focusable="false"><use href="#logo-mark"/></svg><span>Pitchealo</span></a>
+    <a class="reg-back" href="./">← Volver al inicio</a>
+  </header>
+
+  <main id="main" class="reg-main">
+    <section class="reg-card" id="signup" aria-labelledby="su-title">
+      <h1 id="su-title">Crear cuenta</h1>
+      <p class="reg-free">Es gratis.</p>
+      <form id="signup-form" novalidate>
+        <fieldset class="reg-fieldset" aria-describedby="err-type">
+          <legend class="reg-q">¿Cómo vas a usar la plataforma? Podés elegir las dos.</legend>
+          <div class="opts">
+            <label class="opt opt--fue">
+              <input type="checkbox" name="as_expert" value="fuente">
+              <span class="opt-box"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2.5 7.5l3 3 6-7"/></svg></span>
+              <span><span class="opt-title">Fuente</span><span class="opt-desc">Respondo consultas de publicadores y quiero aparecer en sus contenidos.</span></span>
+              <span class="opt-art" data-pcs="sign fue" aria-hidden="true"></span>
+            </label>
+            <label class="opt opt--pub">
+              <input type="checkbox" name="as_journalist" value="publicador">
+              <span class="opt-box"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2.5 7.5l3 3 6-7"/></svg></span>
+              <span><span class="opt-title">Publicador</span><span class="opt-desc">Produzco contenidos y busco fuentes. Revisamos cada pedido a mano antes de habilitarlo.</span></span>
+              <span class="opt-art" data-pcs="write pub" aria-hidden="true"></span>
+            </label>
+          </div>
+          <p class="err" id="err-type" role="alert">Elegí al menos una opción para continuar.</p>
+        </fieldset>
+        <div class="field">
+          <label for="full_name">Nombre y apellido</label>
+          <input class="input" id="full_name" name="full_name" type="text" autocomplete="name" required aria-describedby="err-name">
+          <p class="err" id="err-name">Contanos cómo te llamás.</p>
+        </div>
+        <div class="field">
+          <label for="email">Correo electrónico</label>
+          <input class="input" id="email" name="email" type="email" autocomplete="email" required aria-describedby="err-email">
+          <p class="err" id="err-email">Ingresá un correo electrónico válido.</p>
+        </div>
+        <div class="field">
+          <label for="password">Contraseña</label>
+          <div class="pw">
+            <input class="input" id="password" name="password" type="password" autocomplete="new-password" required minlength="8" aria-describedby="pw-hint err-pw">
+            <button class="pw-toggle" type="button" aria-controls="password" aria-pressed="false">Mostrar</button>
+          </div>
+          <p class="hint" id="pw-hint">Mínimo 8 caracteres.</p>
+          <p class="err" id="err-pw">La contraseña necesita al menos 8 caracteres.</p>
+        </div>
+        <button class="btn reg-submit" type="submit">Registrarme</button>
+      </form>
+      <p class="reg-foot">¿Ya tenés cuenta? <a href="https://pitchealo.com/ingresar">Iniciar sesión</a></p>
+      <p class="reg-note">Prototipo de diseño: nada de lo que escribas sale de esta página.</p>
+    </section>
+
+    <section class="ob" id="onboarding" hidden aria-labelledby="ob-title">
+      <div class="ob-bar" aria-hidden="true"></div>
+      <div class="ob-head">
+        <div class="ob-meta"><span class="ob-who"></span><span class="ob-count" aria-live="polite"></span></div>
+        <ol class="stepper" aria-label="Pasos"></ol>
+      </div>
+      <form class="ob-form" novalidate>
+        <div class="ob-stage">
+          <div class="ob-pane"></div>
+          <div class="ob-art" aria-hidden="true"><div class="ob-art-paper"></div><div class="ob-art-char"></div></div>
+        </div>
+        <div class="ob-foot">
+          <button class="btn btn--ghost ob-prev" type="button">← Anterior</button>
+          <button class="ob-skip" type="button" hidden>Saltar por ahora</button>
+          <button class="btn ob-next" type="submit">Siguiente <span class="arr" aria-hidden="true">→</span></button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <template id="tpl-camila"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false"><defs><clipPath id="av-reg-camila"><circle cx="32" cy="32" r="32"/></clipPath></defs><g clip-path="url(#av-reg-camila)"><rect width="64" height="64" fill="#EFE4CC"/><path d="M8 66c1.6-12.6 11-19.6 24-19.6S54.4 53.4 56 66z" fill="#B85C38"/><path d="M27 37h10v8.6c-1.4 2.2-3.2 3.2-5 3.2s-3.6-1-5-3.2z" fill="#DDB091"/><ellipse cx="32" cy="29" rx="11.2" ry="12.6" fill="#F3D2B8"/><circle cx="20.9" cy="30.4" r="2" fill="#DDB091"/><circle cx="43.1" cy="30.4" r="2" fill="#DDB091"/><circle cx="32" cy="11.2" r="5.4" fill="#8A3E22"/><path d="M20.9 27c.2-8 5.2-12.4 11.1-12.4S42.9 19 43.1 27c-2.4-3.6-6.4-5.6-11.1-5.6S23.3 23.4 20.9 27z" fill="#8A3E22"/><circle cx="27.6" cy="29.4" r="1.3" fill="#2a211c"/><circle cx="36.4" cy="29.4" r="1.3" fill="#2a211c"/><circle cx="25.6" cy="33.2" r="1.7" fill="#E9967E" opacity=".45"/><circle cx="38.4" cy="33.2" r="1.7" fill="#E9967E" opacity=".45"/><path d="M29.2 34.6q2.8 2.2 5.6 0" fill="none" stroke="#2a211c" stroke-width="1.1" stroke-linecap="round"/></g></svg></template>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="logo-mark" viewBox="0 0 48 32">
+      <path fill="currentColor" d="M4 29c-1.6-3.4-2.4-6.6-2.4-10.2C1.6 10.4 7 4 14 4c5.4 0 9 3.6 9.4 8.4l2.4 4.6c.3.6 0 1.1-.6 1.3l-1.4.4.5 1.6-1.6.9.9 1.3c-.2 2.5-2 3.9-4.6 3.9h-2.4V29z"/>
+      <path d="M28 13.6l2.4-1.6M28.4 18h3M28 22.4l2.4 1.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <path fill="currentColor" fill-rule="evenodd" d="M36.5 4h7A2.5 2.5 0 0 1 46 6.5v21a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 34 27.5v-21A2.5 2.5 0 0 1 36.5 4zM37 7.2a.8.8 0 0 0-.8.8v3.4c0 .44.36.8.8.8h6a.8.8 0 0 0 .8-.8V8a.8.8 0 0 0-.8-.8zM40 14.4a2.1 2.1 0 1 0 0 4.2 2.1 2.1 0 1 0 0-4.2zM37.6 22.2a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5zM40 22.2a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5zM42.4 22.2a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5zM37.6 24.8a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5zM40 24.8a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5zM42.4 24.8a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5z"/>
+      <path d="M38.2 9.7h.9l.6-1 .7 2 .6-1h.8" fill="none" stroke="currentColor" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle fill="currentColor" cx="40" cy="16.5" r=".8"/>
+    </symbol>
+  </svg>
+  <script src="js/character.js"></script>
+  <script src="js/sections.js"></script>
+  <script src="js/registro.js"></script>
+</body>
+</html>

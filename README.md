@@ -46,3 +46,18 @@ Paths below are inside `v1/`.
 
 Keyboard focus on either button plays the same animation, touch plays it on press, and
 `prefers-reduced-motion` swaps the wind for a simple fade.
+
+## V2 files
+
+Paths below are inside `v2/` (editorial version based on pitchealo.com).
+
+| Path | What it is |
+| --- | --- |
+| `index.html` | Home: hero, comparison, «Tu conocimiento», journalists, categories, about, footer |
+| `registro.html` | Sign-up and onboarding |
+| `css/site.css`, `css/registro.css` | Styles (Playfair Display, Newsreader, Public Sans, Caveat; all OFL) |
+| `js/character.js` | The sketch-style character (`peek`, `write`, `sign`, `wave`, `celebrate`, `hello`) |
+| `js/hero.js` | Sketched clippings, line ripple and wind on hover |
+| `js/sections.js`, `js/registro.js` | Scroll reveals; sign-up and onboarding flows |
+
+Colours: Publicadores `#b9552b`, Fuentes `#008c7d`.
