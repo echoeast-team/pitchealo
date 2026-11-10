@@ -333,7 +333,7 @@
       var st = i < idx ? 'is-done' : i === idx ? 'is-current' : '';
       return '<li class="st ' + st + '" data-side="' + s.side + '"' + (i === idx ? ' aria-current="step"' : '') + '>' +
         '<span class="st-dot">' + (i < idx ? CHECK + '<span class="sr-only">Completado: </span>' : (i + 1)) + '</span>' +
-        '<span class="st-label">' + STEPS[s.key].label + '</span></li>';
+        '<span class="sr-only">' + STEPS[s.key].label + '</span></li>';
     }).join('');
     stepper.classList.toggle('is-compact', flow.length > 6 || window.innerWidth < 900);
   }

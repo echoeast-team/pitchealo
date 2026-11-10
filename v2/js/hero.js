@@ -215,7 +215,7 @@
         '<path class="stroke stroke--' + data.type + '" d="' + d + '"/>' +
         '<g class="ink-char">' + C.group(isWrite ? 'write' : 'sign', { side: isWrite ? 'pub' : 'fue' }) + '</g>' +
         '</svg>';
-      ink = { s: isWrite ? 0.9 : 0.84 };
+      ink = { s: isWrite ? 1.15 : 1.1 };
     }
     if (isPeek) html += '<div class="peek-hands peek-hands--' + side + '"' + peekStyle + '><span></span><span></span></div>';
     el.innerHTML = html;
