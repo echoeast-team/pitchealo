@@ -2,7 +2,7 @@
 *.log
 node_modules/
 # Carmen Sans is commercially licensed: keep the font files out of the public repo
-fonts/carmen-sans/*.woff
-fonts/carmen-sans/*.woff2
-fonts/carmen-sans/*.otf
-fonts/carmen-sans/*.ttf
+v1/fonts/carmen-sans/*.woff
+v1/fonts/carmen-sans/*.woff2
+v1/fonts/carmen-sans/*.otf
+v1/fonts/carmen-sans/*.ttf
