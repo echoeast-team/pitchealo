@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 32" width="48" height="32" fill="currentColor" role="img" aria-label="Pitchealo logo">
+  <path d="M4 29c-1.6-3.4-2.4-6.6-2.4-10.2C1.6 10.4 7 4 14 4c5.4 0 9 3.6 9.4 8.4l2.4 4.6c.3.6 0 1.1-.6 1.3l-1.4.4.5 1.6-1.6.9.9 1.3c-.2 2.5-2 3.9-4.6 3.9h-2.4V29z"/>
+  <path d="M28 13.6l2.4-1.6M28.4 18h3M28 22.4l2.4 1.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  <path fill-rule="evenodd" d="M36.5 4h7A2.5 2.5 0 0 1 46 6.5v21a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 34 27.5v-21A2.5 2.5 0 0 1 36.5 4zM37 7.2a.8.8 0 0 0-.8.8v3.4c0 .44.36.8.8.8h6a.8.8 0 0 0 .8-.8V8a.8.8 0 0 0-.8-.8zM40 14.4a2.1 2.1 0 1 0 0 4.2 2.1 2.1 0 1 0 0-4.2zM37.6 22.2a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5zM40 22.2a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5zM42.4 22.2a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5zM37.6 24.8a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5zM40 24.8a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5zM42.4 24.8a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5z"/>
+  <path d="M38.2 9.7h.9l.6-1 .7 2 .6-1h.8" fill="none" stroke="currentColor" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="40" cy="16.5" r=".8"/>
+</svg>
