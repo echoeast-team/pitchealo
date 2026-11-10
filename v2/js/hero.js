@@ -174,7 +174,7 @@
     var peekStyle = '';
     if (isPeek) {
       peekStyle = ' style="--peek-dur:' + (6.5 + Math.random() * 3).toFixed(2) + 's;--peek-delay:' + (-Math.random() * 8).toFixed(2) + 's"';
-      html += '<div class="peek peek--' + side + '"' + peekStyle + '>' + C.svg('peek', { side: 'ink' }) + '</div>';
+      html += '<div class="peek peek--' + side + '"' + peekStyle + '>' + C.svg('peek', { side: side === 'l' ? 'pub' : 'fue' }) + '</div>';
     }
     var limit = isWrite ? ' paper-body--write' : isSign ? ' paper-body--sign' : '';
     html +=
@@ -215,7 +215,7 @@
         '<path class="stroke stroke--' + data.type + '" d="' + d + '"/>' +
         '<g class="ink-char">' + C.group(isWrite ? 'write' : 'sign', { side: isWrite ? 'pub' : 'fue' }) + '</g>' +
         '</svg>';
-      ink = { s: isWrite ? 1.15 : 1.1 };
+      ink = { s: isWrite ? 1.02 : 1 };
     }
     if (isPeek) html += '<div class="peek-hands peek-hands--' + side + '"' + peekStyle + '><span></span><span></span></div>';
     el.innerHTML = html;

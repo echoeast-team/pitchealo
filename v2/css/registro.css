@@ -53,13 +53,15 @@ body[data-side="both"] .reg-card { box-shadow: 7px 7px 0 var(--pub), 12px 12px 0
 .opt-title { display: block; font: 700 15px/1.3 var(--font-ui); color: var(--ink); }
 .opt-desc { display: block; margin-top: 2px; font: 400 13.5px/1.45 var(--font-ui); color: var(--muted); }
 .opt-art { width: 64px; height: 56px; display: grid; place-items: center; transition: transform .35s var(--ease-out); }
-.opt-art .pcs-svg { width: 62px; height: auto; overflow: visible; }
-.opt .pcs-hatch, .opt .pcs-cheek, .opt .pcs-quill-hatch, .opt .pcs-pen-band { stroke: #9a9a9a; transition: stroke .3s var(--ease); }
+.opt-art .pcs-svg { width: auto; height: 60px; overflow: hidden; }
+.opt .pcs-jacket { fill: #cfcfcf; transition: fill .3s var(--ease); }
+.opt .pcs-sleeve { stroke: #cfcfcf; transition: stroke .3s var(--ease); }
 .opt.is-on { border-color: var(--o-side); background: var(--o-tint); box-shadow: inset 0 0 0 1px var(--o-side); }
 .opt.is-on .opt-box { background: var(--o-side); border-color: var(--o-side); }
 .opt.is-on .opt-box svg { stroke-dashoffset: 0; }
 .opt.is-on .opt-art { transform: translateY(-3px) rotate(-3deg); }
-.opt.is-on .pcs-hatch, .opt.is-on .pcs-cheek, .opt.is-on .pcs-quill-hatch, .opt.is-on .pcs-pen-band { stroke: var(--o-side); }
+.opt.is-on .pcs-jacket { fill: var(--o-side); }
+.opt.is-on .pcs-sleeve { stroke: var(--o-side); }
 .opt:has(input:focus-visible) { outline: 2px solid var(--ink); outline-offset: 3px; }
 
 .field { margin-top: 16px; }
@@ -177,8 +179,9 @@ body[data-side="both"] .reg-submit { background: linear-gradient(90deg, var(--pu
   transition: background-color .45s var(--ease);
 }
 .ob-art::after { content: attr(data-caption); position: absolute; left: 12px; right: 12px; bottom: 10px; font: 600 10px/1.2 var(--font-ui); letter-spacing: .14em; text-transform: uppercase; color: var(--ink); }
-.ob-art-char { position: absolute; left: 50%; top: 46%; width: 170px; transform: translate(-50%, -50%); }
-.ob-art-char .pcs-svg { width: 100%; height: auto; overflow: visible; }
+.ob-art-char { position: absolute; left: 50%; top: 46%; transform: translate(-50%, -50%); }
+.ob-art-char .pcs-svg { display: block; width: auto; height: 214px; overflow: visible; }
+.ob-art[data-pose="peek"] .ob-art-char .pcs-svg { height: 190px; }
 .ob-art-char.is-pop { animation: char-pop .55s var(--ease-out); }
 @keyframes char-pop { 0% { transform: translate(-50%, -40%) scale(.85); opacity: 0; } 60% { transform: translate(-50%, -53%) scale(1.04); opacity: 1; } 100% { transform: translate(-50%, -50%) scale(1); } }
 .ob-art-paper { position: absolute; right: -14px; bottom: 34px; width: 120px; height: 70px; background: #fff; border: 1px solid var(--ink); transform: rotate(-4deg); }
@@ -285,7 +288,9 @@ body[data-side="both"] .reg-submit { background: linear-gradient(90deg, var(--pu
   .ob-stage { grid-template-columns: 1fr; gap: 20px; padding: 24px 22px 4px; min-height: 0; }
   .ob-art { order: -1; height: 150px; }
   .ob-art::after { display: none; }
-  .ob-art-char { width: 112px; top: 50%; }
+  .ob-art-char { top: 50%; }
+  .ob-art-char .pcs-svg { height: 126px; }
+  .ob-art[data-pose="peek"] .ob-art-char .pcs-svg { height: 120px; }
   .ob-art-paper { width: 96px; height: 56px; bottom: 18px; }
   .ob-head { padding: 22px 22px 0; }
   .ob-foot { padding: 18px 22px 22px; }
@@ -298,7 +303,7 @@ body[data-side="both"] .reg-submit { background: linear-gradient(90deg, var(--pu
   .reg-card h1 { font-size: 30px; }
   .opt { grid-template-columns: 22px 1fr 48px; gap: 10px; }
   .opt-art { width: 48px; }
-  .opt-art .pcs-svg { width: 46px; }
+  .opt-art .pcs-svg { height: 52px; }
   .split { grid-template-columns: 1fr; }
   .ob { box-shadow: 5px 5px 0 var(--side); }
   .ob-title { font-size: 27px; }
@@ -318,7 +323,7 @@ body[data-side="both"] .reg-submit { background: linear-gradient(90deg, var(--pu
 .ob-art[data-pose="peek"]::after { top: 12px; bottom: auto; z-index: 3; }
 .ob-art::after { z-index: 3; }
 .ob-art-char { z-index: 1; }
-.ob-art[data-pose="celebrate"] .ob-art-char { width: 190px; }
+
 .field-legend { padding: 0; }
 
 /* keep the BORRADOR stamp clear of the name on the live preview */

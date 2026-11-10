@@ -56,7 +56,7 @@ Paths below are inside `v2/` (editorial version based on pitchealo.com).
 | `index.html` | Home: hero, comparison, «Tu conocimiento», journalists, categories, about, footer |
 | `registro.html` | Sign-up and onboarding |
 | `css/site.css`, `css/registro.css` | Styles (Playfair Display, Newsreader, Public Sans, Caveat; all OFL) |
-| `js/character.js` | The sketch-style character (`peek`, `write`, `sign`, `wave`, `celebrate`, `hello`) |
+| `js/character.js` | The character: a tall figure drawn as a rough black-and-white sketch, colour only on the jacket (`hello`, `peek`, `bust`, `write`, `sign`, `wave`, `celebrate`) |
 | `js/hero.js` | Sketched clippings, line ripple and wind on hover |
 | `js/sections.js`, `js/registro.js` | Scroll reveals; sign-up and onboarding flows |
 
