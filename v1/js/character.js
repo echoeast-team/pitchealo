@@ -97,13 +97,51 @@
     return poses.write({ tool: 'pen' });
   };
 
+  // ---- Added for onboarding (additive; existing poses above are unchanged) ----
+
+  // A mitten hand drawn around (0,0); pc-hand class is animatable from CSS.
+  function hand(cx, cy, rot, cls) {
+    return (
+      '<g class="pc-hand ' + (cls || '') + '" transform="translate(' + cx + ' ' + cy + ') rotate(' + rot + ')">' +
+      '<g class="pc-hand-inner">' +
+      '<ellipse class="pc-body" cx="0" cy="0" rx="2.15" ry="2.55"/>' +
+      '<ellipse class="pc-body" cx="-1.95" cy=".55" rx=".9" ry="1.2" transform="rotate(-28 -1.95 .55)"/>' +
+      '</g></g>'
+    );
+  }
+
+  // Waving hello: the logo head with a raised hand beside the face.
+  poses.wave = function () {
+    return (
+      body() +
+      face({ x: 0.35, y: -0.15 }) +
+      '<path class="pc-waves pc-waves--on" d="' + WAVES + '" fill="none" stroke-width="1.6" stroke-linecap="round"/>' +
+      hand(30.6, 6.4, 18, 'pc-hand--wave')
+    );
+  };
+
+  // Celebrating: happy closed eyes, open smile, both hands up.
+  poses.celebrate = function () {
+    return (
+      body() +
+      '<path class="pc-happy-eye" d="M15.6 12.2q2.2-2.6 4.4 0" fill="none" stroke="#13212a" stroke-width=".85" stroke-linecap="round"/>' +
+      '<circle class="pc-cheek" cx="19.4" cy="16.6" r="1.75" fill="#F58C78" opacity=".8"/>' +
+      '<path class="pc-mouth" d="M20.1 20.2q1.6 2.6 3.4.3z" fill="#13212a"/>' +
+      '<path class="pc-waves pc-waves--on" d="' + WAVES + '" fill="none" stroke-width="1.6" stroke-linecap="round"/>' +
+      hand(29.4, 3.6, 24, 'pc-hand--left') +
+      hand(4.2, 3.4, -24, 'pc-hand--right')
+    );
+  };
+
+  var VIEWBOX = { write: '0 2 34 30', sign: '0 2 34 30', wave: '0 1 35 29', celebrate: '-1 -1 35 31' };
+
   function group(pose, opts) {
     var fn = poses[pose] || poses.hello;
     return '<g class="pc pc--' + pose + '">' + fn(opts || {}) + '</g>';
   }
 
   function svg(pose, opts) {
-    var vb = pose === 'write' || pose === 'sign' ? '0 2 34 30' : '0 2 33 28';
+    var vb = VIEWBOX[pose] || '0 2 33 28';
     var cls = (opts && opts.className) || '';
     return (
       '<svg class="pc-svg ' + cls + '" viewBox="' + vb + '" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">' +

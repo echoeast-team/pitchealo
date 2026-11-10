@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crear cuenta · Pitchealo</title>
+  <meta name="description" content="Creá tu cuenta gratis en Pitchealo como fuente o como publicador.">
+  <meta name="theme-color" content="#E9EBDF">
+  <link rel="icon" href="assets/pitchealo-logo.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/onboarding.css">
+</head>
+<body class="ob-page" data-side="none" data-view="signup">
+  <a class="ob-skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="ob-nav">
+    <a class="ob-logo" href="index.html" aria-label="Pitchealo, volver al inicio">
+      <svg viewBox="0 0 48 32" aria-hidden="true" focusable="false"><use href="#logo-mark"/></svg>
+      <span>Pitchealo</span>
+    </a>
+    <div class="ob-nav-right">
+      <p class="ob-nav-login" data-only="signup">¿Ya tenés cuenta? <a href="registro.html?modo=ingresar" data-login>Iniciar sesión</a></p>
+      <a class="ob-exit" href="index.html" data-only="flow">Salir</a>
+    </div>
+  </header>
+
+  <main id="main" class="ob-main">
+    <!-- ============================================================ -->
+    <!-- Sign-up                                                      -->
+    <!-- ============================================================ -->
+    <section class="ob-signup" id="signup" aria-labelledby="signup-title">
+      <div class="ob-signup-art" aria-hidden="true">
+        <div class="ob-signup-art-blob"></div>
+        <div class="ob-signup-art-paper ob-signup-art-paper--a"></div>
+        <div class="ob-signup-art-paper ob-signup-art-paper--b"></div>
+        <div class="ob-signup-art-char ob-signup-art-char--none" data-art="none"></div>
+        <div class="ob-signup-art-char ob-signup-art-char--pub" data-art="pub"></div>
+        <div class="ob-signup-art-char ob-signup-art-char--fue" data-art="fue"></div>
+        <p class="ob-signup-art-caption">
+          <span data-cap="none">Elegí cómo vas a usar Pitchealo.</span>
+          <span data-cap="pub">Publicadores: encontrá fuentes para tu próxima historia.</span>
+          <span data-cap="fue">Fuentes: llevá tu conocimiento a los medios.</span>
+          <span data-cap="both">Las dos cosas: buscá fuentes y respondé solicitudes.</span>
+        </p>
+      </div>
+
+      <form class="ob-signup-card" id="signup-form" novalidate>
+        <h1 class="ob-signup-title" id="signup-title">Crear cuenta</h1>
+        <p class="ob-signup-sub">Es gratis.</p>
+
+        <fieldset class="ob-type-picker" aria-describedby="type-error">
+          <legend>¿Cómo vas a usar la plataforma? Podés elegir las dos.</legend>
+          <label class="ob-type-option ob-type-option--fue">
+            <input type="checkbox" name="as_expert" value="fuente">
+            <span class="ob-type-check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3.5 8.4l2.9 2.8 6.1-6.4"/></svg></span>
+            <span class="ob-type-icon" aria-hidden="true" data-icon="sign"></span>
+            <span class="ob-type-text">
+              <span class="ob-type-name">Fuente</span>
+              <span class="ob-type-desc">Respondo consultas de publicadores y quiero aparecer en sus contenidos.</span>
+            </span>
+          </label>
+          <label class="ob-type-option ob-type-option--pub">
+            <input type="checkbox" name="as_journalist" value="publicador">
+            <span class="ob-type-check" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3.5 8.4l2.9 2.8 6.1-6.4"/></svg></span>
+            <span class="ob-type-icon" aria-hidden="true" data-icon="write"></span>
+            <span class="ob-type-text">
+              <span class="ob-type-name">Publicador</span>
+              <span class="ob-type-desc">Produzco contenidos y busco fuentes. Revisamos cada pedido a mano antes de habilitarlo.</span>
+            </span>
+          </label>
+          <p class="ob-field-error" id="type-error" role="alert"></p>
+        </fieldset>
+
+        <div class="ob-field">
+          <label for="full_name">Nombre y apellido</label>
+          <input id="full_name" name="full_name" type="text" autocomplete="name" aria-describedby="full_name-error">
+          <p class="ob-field-error" id="full_name-error" role="alert"></p>
+        </div>
+        <div class="ob-field">
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" aria-describedby="email-error">
+          <p class="ob-field-error" id="email-error" role="alert"></p>
+        </div>
+        <div class="ob-field">
+          <label for="password">Contraseña</label>
+          <div class="ob-password-wrap">
+            <input id="password" name="password" type="password" autocomplete="new-password" aria-describedby="password-hint password-error">
+            <button type="button" class="ob-password-toggle" aria-pressed="false" aria-controls="password">Mostrar</button>
+          </div>
+          <div class="ob-password-meter" aria-hidden="true"><span></span><span></span><span></span></div>
+          <p class="ob-field-hint" id="password-hint">Al menos 8 caracteres.</p>
+          <p class="ob-field-error" id="password-error" role="alert"></p>
+        </div>
+
+        <button class="ob-btn ob-btn--primary ob-btn--block" type="submit">
+          <span>Registrarme</span>
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4"/></svg>
+        </button>
+        <p class="ob-signup-foot">¿Ya tenés cuenta? <a href="registro.html?modo=ingresar" data-login>Iniciar sesión</a></p>
+        <p class="ob-signup-note" id="login-note" role="status"></p>
+      </form>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- Onboarding                                                   -->
+    <!-- ============================================================ -->
+    <section class="ob-flow" id="flow" aria-label="Configuración de tu cuenta" hidden>
+      <div class="ob-flow-progress">
+        <div class="ob-flow-progress-top">
+          <p class="ob-flow-count"><span data-progress-count>Paso 1 de 6</span><span class="ob-flow-dot" aria-hidden="true">·</span><span class="ob-flow-label" data-progress-label></span></p>
+          <p class="ob-flow-next" data-progress-next></p>
+        </div>
+        <div class="ob-flow-bar" role="progressbar" aria-label="Progreso" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1" data-progress-bar></div>
+      </div>
+
+      <div class="ob-flow-card">
+        <div class="ob-flow-stage" data-stage></div>
+        <div class="ob-flow-actions">
+          <button type="button" class="ob-btn ob-btn--ghost" data-prev>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H4M7.5 4l-4 4 4 4"/></svg>
+            <span>Anterior</span>
+          </button>
+          <p class="ob-flow-hint" data-hint>Presioná <kbd>Enter</kbd> para continuar</p>
+          <button type="button" class="ob-btn ob-btn--primary" data-next>
+            <span data-next-label>Siguiente</span>
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4l4 4-4 4"/></svg>
+          </button>
+        </div>
+      </div>
+      <p class="sr-only" aria-live="polite" data-live></p>
+    </section>
+  </main>
+
+  <div class="ob-confetti" aria-hidden="true" data-confetti></div>
+
+  <!-- Logo mark, from Pitchealo-Logo.svg -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="logo-mark" viewBox="0 0 48 32">
+      <path fill="currentColor" d="M4 29c-1.6-3.4-2.4-6.6-2.4-10.2C1.6 10.4 7 4 14 4c5.4 0 9 3.6 9.4 8.4l2.4 4.6c.3.6 0 1.1-.6 1.3l-1.4.4.5 1.6-1.6.9.9 1.3c-.2 2.5-2 3.9-4.6 3.9h-2.4V29z"/>
+      <path d="M28 13.6l2.4-1.6M28.4 18h3M28 22.4l2.4 1.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <path fill="currentColor" fill-rule="evenodd" d="M36.5 4h7A2.5 2.5 0 0 1 46 6.5v21a2.5 2.5 0 0 1-2.5 2.5h-7A2.5 2.5 0 0 1 34 27.5v-21A2.5 2.5 0 0 1 36.5 4zM37 7.2a.8.8 0 0 0-.8.8v3.4c0 .44.36.8.8.8h6a.8.8 0 0 0 .8-.8V8a.8.8 0 0 0-.8-.8zM40 14.4a2.1 2.1 0 1 0 0 4.2 2.1 2.1 0 1 0 0-4.2zM37.6 22.2a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5zM40 22.2a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5zM42.4 22.2a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5zM37.6 24.8a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5zM40 24.8a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5zM42.4 24.8a.75.75 0 1 0 0 1.5.75.75 0 1 0 0-1.5z"/>
+      <path d="M38.2 9.7h.9l.6-1 .7 2 .6-1h.8" fill="none" stroke="currentColor" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle fill="currentColor" cx="40" cy="16.5" r=".8"/>
+    </symbol>
+  </svg>
+
+  <script src="js/character.js"></script>
+  <script src="js/onboarding.js"></script>
+</body>
+</html>
