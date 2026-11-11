@@ -2,7 +2,7 @@
 
 The root `index.html` is a landing page linking to two versions:
 
-- `v1/`: the Luma-inspired version (home + `registro.html` sign-up and onboarding)
+- `v1/`: the Luma-inspired version (home + `registro.html` sign-up and onboarding). Design rules: [`v1/design.md`](v1/design.md)
 - `v2/`: the editorial version based on pitchealo.com (home + `registro.html`)
 
 Live on GitHub Pages: https://echoeast-team.github.io/pitchealo/
